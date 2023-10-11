@@ -53,9 +53,9 @@ Neste exercício, verificamos se você é capaz de:
 
 1. Clone o repositório
 
-- Use o comando: `git@github.com:betrybe/csharp-0x-exercicio-crud-de-clientes.git`
+- Use o comando: `git@github.com:betrybe/csharp-001-exercicio-crud-de-clientes.git`
 - Entre na pasta do repositório que você acabou de clonar:
-    - `cd csharp-0x-exercicio-crud-de-clientes`
+    - `cd csharp-001-exercicio-crud-de-clientes`
 
 2. Instale as dependências
 
@@ -69,12 +69,12 @@ Neste exercício, verificamos se você é capaz de:
     - Exemplo: `git checkout main`
 - Agora, crie uma branch à qual você vai submeter os `commits` do seu exercício:
     - Você deve criar uma branch no seguinte formato: `nome-sobrenome-nome-do-exercício`;
-    - Exemplo: `git checkout -b maria-soares-csharp-0x-exercicio-crud-de-clientes`
+    - Exemplo: `git checkout -b maria-soares-csharp-001-exercicio-crud-de-clientes`
 
 4. Crie na raiz do exercício os arquivos que você precisará desenvolver:
 
 - Verifique que você está na raiz do exercício:
-    - Exemplo: `pwd` -> o retorno vai ser algo tipo _/Users/maria/code/**csharp-0x-exercicio-crud-de-clientes**_
+    - Exemplo: `pwd` -> o retorno vai ser algo tipo _/Users/maria/code/**csharp-001-exercicio-crud-de-clientes**_
 - Crie os arquivos index.html e style.css:
     - Exemplo: `touch index.html style.css`
 
@@ -93,11 +93,11 @@ Neste exercício, verificamos se você é capaz de:
 
 6. Adicione a sua branch com o novo `commit` ao repositório remoto
 
-- Usando o exemplo anterior: `git push -u origin maria-soares-csharp-0x-exercicio-crud-de-clientes`
+- Usando o exemplo anterior: `git push -u origin maria-soares-csharp-001-exercicio-crud-de-clientes`
 
 7. Crie um novo `Pull Request` _(PR)_
 
-- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/csharp-0x-exercicio-crud-de-clientes/pulls)
+- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/csharp-001-exercicio-crud-de-clientes/pulls)
     - Clique no botão verde _"New pull request"_
     - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
 - Coloque um título para o seu _Pull Request_
@@ -108,7 +108,7 @@ Neste exercício, verificamos se você é capaz de:
 
  <img width="1335" alt="Exemplo de pull request" src="https://user-images.githubusercontent.com/42356399/166255109-b95e6eb4-2503-45e5-8fb3-cf7caa0436e5.png">
 
-- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/csharp-0x-exercicio-crud-de-clientes/pulls) e confira que o seu _Pull Request_ está criado
+- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/csharp-001-exercicio-crud-de-clientes/pulls) e confira que o seu _Pull Request_ está criado
 
 </details>
 
@@ -417,7 +417,7 @@ Dica: O método <code>NoContent()</code> do <code>ControllerBase</code> pode ser
 <details>
 <summary><strong> 🗣 Nos dê feedbacks sobre o exercício!</strong></summary>
 
-Ao finalizar e submeter o exercício, não se esqueça de avaliar sua experiência preenchendo o [formulário](https://be-trybe.typeform.com/to/ZTeR4IbH).
+Ao finalizar e submeter o exercício, não se esqueça de avaliar sua experiência preenchendo o [formulário](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH1&template=betrybe/csharp-0x-exercicio-crud-de-clientes).
 **Leva menos de 3 minutos!**
 
 </details>
