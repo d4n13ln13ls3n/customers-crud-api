@@ -164,10 +164,34 @@ public class CustomersControllerTest : IClassFixture<WebApplicationFactory<Progr
         _repositoryMock.Verify(r => r.Create(It.Is<Customer>(c => c.Id == nextIdMock)), Times.Once());
     }
 
-    [Fact]
+    [Fact(DisplayName = "4. Crie o método `Update`")]
     public async Task UpdateTest()
     {
-        throw new NotImplementedException();
+        _repositoryMock.Reset();
+
+        var idToUpdateMock = 1;
+
+        var customerMock = new Customer { 
+            Name = "Ana",
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now,
+            CPF = "01234578909",
+            Transactions = new List<Transaction>(),
+        };
+
+        _repositoryMock
+            .Setup(r => r.Update(It.Is<int>(id => id == idToUpdateMock), It.IsAny<object>()))
+            .Returns(true);
+        
+        var client = _factory.CreateClient();
+        var response = await client.PutAsJsonAsync("/customer/1", customerMock);
+
+        Assert.Equal(HttpStatusCode.OK, response?.StatusCode);
+
+        var body = await response.Content.ReadAsStringAsync();
+        Assert.Equal($"Customer {idToUpdateMock} updated", body);
+        
+        _repositoryMock.Verify(r => r.Update(idToUpdateMock, It.IsAny<object>()), Times.Once());
     }
 
     [Fact]

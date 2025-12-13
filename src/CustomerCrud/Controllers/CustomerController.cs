@@ -46,4 +46,14 @@ public class CustomerController : ControllerBase
         
         return BadRequest();
     }
+
+    [HttpPut("{id}")]
+    public ActionResult Update(int id, dynamic fields)
+    {
+        var customerResponse = _repository.Update(id, fields);
+
+        if (customerResponse) return Ok($"Customer {id} updated");
+        
+        return NotFound("Customer not found");
+    }
 }
