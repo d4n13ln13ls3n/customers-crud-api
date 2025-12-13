@@ -32,4 +32,18 @@ public class CustomerController : ControllerBase
 
         return Ok(customer);
     }
+
+    [HttpPost]
+    public ActionResult<Customer> Create(Customer customer)
+    {
+        customer.Id = _repository.GetNextIdValue();
+        customer.CreatedAt = DateTime.Now;
+        customer.UpdatedAt = DateTime.Now;
+
+        var customerResponse = _repository.Create(customer);
+
+        if (customerResponse) return CreatedAtAction("GetById", new { id = customer.Id }, customer);
+        
+        return BadRequest();
+    }
 }
