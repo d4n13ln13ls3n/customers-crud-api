@@ -38,6 +38,8 @@ tests/
  └── CustomerCrud.Test/
      └── CustomersControllerTest.cs
 
+---
+
 ## 📝 Nota sobre a origem do projeto
 
 Este projeto foi desenvolvido **a partir de um repositório educacional fornecido pela Trybe**, que continha a estrutura inicial e o contexto do desafio.
