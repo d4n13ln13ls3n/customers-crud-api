@@ -17,29 +17,6 @@ O projeto utiliza **JsonFlatFileDataStore** como mecanismo de persistência e fo
 
 ---
 
-## 📁 Estrutura do projeto
-
-```text
-src/
- └── CustomerCrud/
-     ├── Controllers/
-     │   └── CustomerController.cs
-     ├── Core/
-     │   └── Customer.cs
-     ├── Repositories/
-     │   ├── ICustomerRepository.cs
-     │   └── CustomerRepository.cs
-     ├── Data/
-     │   └── Database.json
-     ├── Program.cs
-     └── CustomerCrud.csproj
-
-tests/
- └── CustomerCrud.Test/
-     └── CustomersControllerTest.cs
-
----
-
 ## 📝 Nota sobre a origem do projeto
 
 Este projeto foi desenvolvido **a partir de um repositório educacional fornecido pela Trybe**, que continha a estrutura inicial e o contexto do desafio.
