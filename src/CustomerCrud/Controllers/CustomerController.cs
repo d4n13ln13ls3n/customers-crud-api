@@ -48,11 +48,19 @@ public class CustomerController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public ActionResult Update(int id, dynamic fields)
+    public ActionResult Update(int id, Customer customer)
     {
-        var customerResponse = _repository.Update(id, fields);
+        var fields = new
+        {
+            Name = customer.Name,
+            CPF = customer.CPF,
+            Transactions = customer.Transactions,
+            UpdatedAt = DateTime.Now
+        };
 
-        if (customerResponse) return Ok($"Customer {id} updated");
+        var updated = _repository.Update(id, fields);
+
+        if (updated) return Ok($"Customer {id} updated");
         
         return NotFound("Customer not found");
     }

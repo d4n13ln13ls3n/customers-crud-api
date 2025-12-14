@@ -403,3 +403,6 @@ FodyWeavers.xsd
 
 # Compiler analysis files
 *.sarif
+
+# Database local
+Data/Database.json
