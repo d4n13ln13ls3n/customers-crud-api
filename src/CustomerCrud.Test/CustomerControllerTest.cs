@@ -1,10 +1,6 @@
 using System.Text.Json;
 using CustomerCrud.Core;
 using CustomerCrud.Repositories;
-using CustomerCrud.Requests;
-using Microsoft.AspNetCore.Hosting; // inserido posteriormente
-using Microsoft.AspNetCore.Mvc.Testing; // inserido posteriormente
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace CustomerCrud.Test;
 
@@ -197,6 +193,19 @@ public class CustomersControllerTest : IClassFixture<WebApplicationFactory<Progr
     [Fact]
     public async Task DeleteTest()
     {
-        throw new NotImplementedException();
+        _repositoryMock.Reset();
+
+        var idToDeleteMock = 1;
+
+        _repositoryMock
+            .Setup(r => r.Delete(It.Is<int>(id => id == idToDeleteMock)))
+            .Returns(true);
+        
+        var client = _factory.CreateClient();
+        var response = await client.DeleteAsync($"/customer/{idToDeleteMock}");
+
+        Assert.Equal(HttpStatusCode.NoContent, response?.StatusCode);
+        
+        _repositoryMock.Verify(r => r.Delete(It.Is<int>(id => id == idToDeleteMock)), Times.Once());
     }
 }
